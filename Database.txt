@@ -1,0 +1,45 @@
+Command 1
+.............................
+
+CREATE DATABASE library_management_system;
+
+USE library_management_system;
+
+
+
+Command 2
+..............................
+
+CREATE TABLE Book(ISBN int primary key, Title varchar(20) not null, Author varchar(20) not null, Price int default 0, Quantity int default 0,CHECK (Price>=0),CHECK (Quantity>=0));
+
+
+
+Command 3
+..............................
+
+CREATE TABLE Student(SID int primary key, Name varchar(20) not null, Course varchar(20) not null, Branch varchar(20) not null, Email varchar(30) not null );
+
+
+
+Command 4
+..............................
+
+CREATE TABLE Issue_Book (ISBN int, SID int,IssueDate date not null, foreign key Fk1(ISBN) references Book(ISBN),foreign key Fk2(SID) references Student(SID) ); 
+
+
+
+Command 5
+..............................
+
+CREATE TABLE Return_Book (SID int,ISBN int, ReturnDate date not null, foreign key Fk11(SID) references Student(SID),foreign key Fk21(ISBN) references Book(ISBN) );
+
+
+
+Command 6
+
+CREATE TABLE Record (SID int, ISBN int, IssueDate date default null, ReturnDate date default null,foreign key Fk12(SID) references Student(SID), foreign key Fk22(ISBN) references Book(ISBN) ); 
+
+
+
+
+

@@ -54,11 +54,11 @@ Create Issue_Book Table
 
 Create Return_Book Table
 
-    CREATE TABLE Return_Book (SID int,ISBN int, ReturnDate date not null, foreign key Fk1(SID) references Student(SID),foreign key Fk2(ISBN) references Book(ISBN) );
+    CREATE TABLE Return_Book (SID int,ISBN int, ReturnDate date not null, foreign key Fk11(SID) references Student(SID),foreign key Fk21(ISBN) references Book(ISBN) );
 
 Record Table
 
-    CREATE TABLE Record (SID int, ISBN int, IssueDate date default null, ReturnDate date default null,foreign key Fk1(SID) references Student(SID), foreign key Fk2(ISBN) references Book(ISBN) ); 
+    CREATE TABLE Record (SID int, ISBN int, IssueDate date default null, ReturnDate date default null,foreign key Fk12(SID) references Student(SID), foreign key Fk22(ISBN) references Book(ISBN) ); 
 
 One all this tables have been created, clone the project, open in netbeans, run the project.
 
