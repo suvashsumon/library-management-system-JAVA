@@ -1,8 +1,6 @@
 
 # Library-Management-System
 
-Youtube Link :- https://www.youtube.com/watch?v=bqpamkKqzPo
-
 This is Library Management project which uses JAVA (GUI and Backend) and MYSQL (Database).
 
 Scope and Objective of Project:-
@@ -61,10 +59,6 @@ Record Table
     CREATE TABLE Record (SID int, ISBN int, IssueDate date default null, ReturnDate date default null,foreign key Fk12(SID) references Student(SID), foreign key Fk22(ISBN) references Book(ISBN) ); 
 
 One all this tables have been created, clone the project, open in netbeans, run the project.
-
-Report has been uploaded into repository and Youtube Description, you can refer it.
-
-Youtube Link :- https://www.youtube.com/watch?v=bqpamkKqzPo
 
 
 
